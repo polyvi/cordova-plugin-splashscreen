@@ -24,7 +24,7 @@
 //
 
 #import <xFace/XUtils.h>
-#import <xFace/XVersionLableFactory.h>
+#import <xFace/XVersionLabelFactory.h>
 
 #import "CDVSplashScreen.h"
 
@@ -55,7 +55,7 @@
 
 - (void)addVersionLabel
 {
-    UILabel *versionLabel = [XVersionLableFactory createWithFrame:_imageView.frame];
+    UILabel *versionLabel = [XVersionLabelFactory createWithFrame:_imageView.frame];
     if(versionLabel)
     {
         for (UIView *subview in [_imageView subviews])

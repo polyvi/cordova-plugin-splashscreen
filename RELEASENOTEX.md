@@ -20,3 +20,17 @@
 -->
 # Release Note X
 
+
+### 0.2.6 Wed Jan 08 2014 15:15:34 GMT+0800 (CST)
+ *  [iOS] Fix typos, rename XVersionLableFactory to XVersionLabelFactory
+ *  added releasenotex.md
+ *  CB-5719 Updated version and RELEASENOTES.md for release 0.2.6
+ *  CB-5658 Update license comment formatting of doc/index.md
+ *  CB-5658 Add doc.index.md for Splashscreen plugin
+ *  CB-5658 Delete stale snapshot of plugin docs
+ *  Handle error when splash image is missing.
+ *  [CB-5565] Incremented plugin version on dev branch.
+ *  [CB-5565] Updated version and RELEASENOTES.md for release 0.2.5
+ *  add ubuntu platform
+ *  Added amazon-fireos platform. Change to use amazon-fireos as a platform if the user agent string contains 'cordova-amazon-fireos'
+ *  CB-5124 - Remove splashscreen config.xml values from iOS Configuration Docs, move to plugin docs

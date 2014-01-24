@@ -41,7 +41,7 @@ namespace WPCordovaClassLib.Cordova.Commands
         {
             Image SplashScreen = new Image();
             BitmapImage splash_image = new BitmapImage();
-            splash_image.SetSource(Application.GetResourceStream(new Uri(@"SplashScreenImage.jpg", UriKind.Relative)).Stream);
+            splash_image.SetSource(Application.GetResourceStream(new Uri(@"SplashScreenImage-WVGA.jpg", UriKind.Relative)).Stream);
             SplashScreen.Source = splash_image;
 
             // Instansiate the popup and set the Child property of Popup to SplashScreen

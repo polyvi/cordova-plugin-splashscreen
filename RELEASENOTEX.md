@@ -7,9 +7,9 @@
 # to you under the Apache License, Version 2.0 (the
 # "License"); you may not use this file except in compliance
 # with the License.  You may obtain a copy of the License at
-# 
+#
 # http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # Unless required by applicable law or agreed to in writing,
 # software distributed under the License is distributed on an
 # "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -21,7 +21,7 @@
 # Release Note X
 
 
-### 0.2.6 Wed Jan 08 2014 15:15:34 GMT+0800 (CST)
+### 0.2.6 Mon Jan 27 2014 16:42:03 GMT+0800 (CST)
  *  [iOS] Fix typos, rename XVersionLableFactory to XVersionLabelFactory
  *  added releasenotex.md
  *  CB-5719 Updated version and RELEASENOTES.md for release 0.2.6
@@ -34,3 +34,5 @@
  *  add ubuntu platform
  *  Added amazon-fireos platform. Change to use amazon-fireos as a platform if the user agent string contains 'cordova-amazon-fireos'
  *  CB-5124 - Remove splashscreen config.xml values from iOS Configuration Docs, move to plugin docs
+ *  splash miss image source crash
+ *  [iOS] Fix typos, rename XVersionLableFactory to XVersionLabelFactory

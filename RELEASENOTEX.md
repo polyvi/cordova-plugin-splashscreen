@@ -36,3 +36,21 @@
  *  CB-5124 - Remove splashscreen config.xml values from iOS Configuration Docs, move to plugin docs
  *  splash miss image source crash
  *  [iOS] Fix typos, rename XVersionLableFactory to XVersionLabelFactory
+
+
+## 0.2.7 (Fri Feb 28 2014)
+
+
+ *  CB-5980 Updated version and RELEASENOTES.md for release 0.2.7
+ *  [CB-3562] Fix aspect ratio on landscape-only iPhone applications
+ *  Delete stale test/ directory
+ *  CB-4051 fix for splashscreen rotation problem
+ *  CB-5719 Incremented plugin version on dev branch.
+ *  Revert "Merge branch 'tizen' of http://github.com/siovene/cordova-plugin-splashscreen"
+ *  Proxy: Correct structure, and only ever create one splashscreen window.
+ *  plugin.xml: Make sure splashscreen proxy is executed.
+ *  Fix path of Tizen's SplashScreenProxy file.
+ *  Fix syntax errors.
+ *  Fix typo.
+ *  Native Tizen implementation of SplashScreen API.
+ *  Add tentative Tizen implementation.

@@ -1,3 +1,4 @@
+
 /*
  Licensed to the Apache Software Foundation (ASF) under one
  or more contributor license agreements.  See the NOTICE file
@@ -116,13 +117,19 @@
     [self.viewController.view removeObserver:self forKeyPath:@"bounds"];
 }
 
+- (NSString *)getImageName
+{
+    NSString *imageName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchImageFile"];
+    return imageName;
+}
+
 // Sets the view's frame and image.
 - (void)updateImage
 {
     UIInterfaceOrientation orientation = self.viewController.interfaceOrientation;
 
     // Use UILaunchImageFile if specified in plist.  Otherwise, use Default.
-    NSString* imageName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchImageFile"];
+    NSString* imageName = [self getImageName];
 
     // Checks to see if the developer has locked the orientation to use only one of Portrait or Landscape
     CDVViewController* vc = (CDVViewController*)self.viewController;

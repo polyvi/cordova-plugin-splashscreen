@@ -24,6 +24,7 @@
 //
 
 #import <xFace/XUtils.h>
+#import <xFace/XConstants.h>
 #import <xFace/XVersionLabelFactory.h>
 
 #import "CDVSplashScreen.h"
@@ -78,6 +79,16 @@
         NSAssert(![[_imageView subviews] count], @"Expect no subviews before the version label is added!");
         [_imageView addSubview:versionLabel];
     }
+}
+
+- (NSString *)getImageName
+{
+    NSString *imageName = [XUtils getPreferenceForKey:CUSTOM_LAUNCH_IMAGE_FILE];
+    if (!imageName) {
+        imageName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchImageFile"];
+    }
+
+    return imageName;
 }
 
 @end

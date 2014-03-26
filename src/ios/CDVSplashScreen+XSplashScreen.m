@@ -43,6 +43,14 @@
     //只有default app才需要显示引擎默认splash
     if ([XUtils isDefaultAppWebView:self.webView]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:NSSelectorFromString(@"pageDidLoad") name:CDVPageDidLoadNotification object:self.webView];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOpenURL:) name:CDVPluginHandleOpenURLNotification object:nil];
+        [self setVisible:YES];
+    }
+}
+
+- (void) handleOpenURL:(NSNotification*)notification
+{
+    if ([XUtils isOptimizedLibRunningMode]) {
         [self setVisible:YES];
     }
 }

@@ -29,6 +29,8 @@
 
 #import "CDVSplashScreen.h"
 
+extern NSString* const kLaunchNotification;
+
 @interface CDVSplashScreen ()
 
 - (void)setVisible:(BOOL)visible;
@@ -44,16 +46,14 @@
     //只有default app才需要显示引擎默认splash
     if ([XUtils isDefaultAppWebView:self.webView]) {
         [[NSNotificationCenter defaultCenter] addObserver:self selector:NSSelectorFromString(@"pageDidLoad") name:CDVPageDidLoadNotification object:self.webView];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleOpenURL:) name:CDVPluginHandleOpenURLNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleLaunchNotification:) name:kLaunchNotification object:nil];
         [self setVisible:YES];
     }
 }
 
-- (void) handleOpenURL:(NSNotification*)notification
+- (void) handleLaunchNotification:(NSNotification*)notification
 {
-    if ([XUtils isOptimizedLibRunningMode]) {
-        [self setVisible:YES];
-    }
+    [self setVisible:YES];
 }
 
 - (void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context

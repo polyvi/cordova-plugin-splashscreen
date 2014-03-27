@@ -84,7 +84,7 @@ extern NSString* const kLaunchNotification;
 - (NSString *)getImageName
 {
     NSString *imageName = [XUtils getPreferenceForKey:CUSTOM_LAUNCH_IMAGE_FILE];
-    if (!imageName) {
+    if (!imageName.length) {
         imageName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UILaunchImageFile"];
     }
 

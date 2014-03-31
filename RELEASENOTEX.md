@@ -54,3 +54,13 @@
  *  Fix typo.
  *  Native Tizen implementation of SplashScreen API.
  *  Add tentative Tizen implementation.
+
+
+## 0.2.8 (Mon Mar 31 2014)
+
+
+ *  [iOS] If CustomLaunchImageFile is empty, use default launch image.
+ *  [iOS] Observe launchNotification to avoid white screen.
+ *  [iOS] Support custom launch image.
+ *  [iOS] Support optimized lib running mode.
+ *  Incremented plugin version on dev branch to 0.2.8-dev
